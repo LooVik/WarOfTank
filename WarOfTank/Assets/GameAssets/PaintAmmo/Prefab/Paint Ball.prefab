@@ -23,10 +23,8 @@ GameObject:
   - component: {fileID: 135405576864117360}
   - component: {fileID: 23477965749785256}
   - component: {fileID: 54707910126541030}
-  - component: {fileID: 114932486538001736}
-  - component: {fileID: 114395493966740034}
-  - component: {fileID: 114839013902414894}
   - component: {fileID: 82476879161157172}
+  - component: {fileID: 114995005167296590}
   m_Layer: 0
   m_Name: Paint Ball
   m_TagString: EnemyProjectile
@@ -183,7 +181,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114395493966740034
+--- !u!114 &114995005167296590
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -191,36 +189,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1973613083752186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4091beed02c06e64cb57c1a4f9ccb689, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundClip: {fileID: 8300000, guid: 5d50ffbf530d0574a9478aa70b0b242e, type: 3}
-  targetTags:
-  - Building
-  - POI
---- !u!114 &114839013902414894
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1973613083752186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2634d612ce005e14692b84388d0c8ede, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTags:
-  - Building
-  - POI
---- !u!114 &114932486538001736
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1973613083752186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d5afd3d9d3ab3840b61e6c753a7ab7d, type: 3}
+  m_Script: {fileID: 11500000, guid: e612a6092e14e4b29affbe2a329c4bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   colors:

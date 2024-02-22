@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 65503992603250242}
   - component: {fileID: 114644395844806482}
   - component: {fileID: 82853810431771282}
+  - component: {fileID: 114118402052885480}
   m_Layer: 0
   m_Name: Enemy Tank
   m_TagString: Enemy
@@ -350,6 +351,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114118402052885480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432738543729112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2364ffcd5e07442d982c656943b26373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1973613083752186, guid: 517e1bf19c06b1e4ab9e84dbe7dec8be, type: 2}
+  spawnPlaceHolder: {fileID: 1349990441626076}
+  rotationAxis: {x: 0, y: 0, z: 1}
+  fireRate: 5
+  ForceShot: 1500
+  moveSpeed: 0.2
+  travelTime: 1
+  killHeight: -10
 --- !u!114 &114644395844806482
 MonoBehaviour:
   m_ObjectHideFlags: 1
