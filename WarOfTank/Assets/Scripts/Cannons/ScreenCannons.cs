@@ -12,11 +12,11 @@ public class ScreenCannons : MonoBehaviour {
 	[SerializeField] private float Forceshot = 750.0f;
 
 	private int curretnAmmo = 0;
-	private ScreenCannons instance;
+	private static ScreenCannons instance;
 
 	public int MaxAmmo { get { return maxAmmo; }}
 	public int CurrentAmmo { get { return curretnAmmo; }}
-	public ScreenCannons Instance { get { return instance; }}
+	public static ScreenCannons Instance { get { return instance; }}
 
 	private void Awake()
 	{
