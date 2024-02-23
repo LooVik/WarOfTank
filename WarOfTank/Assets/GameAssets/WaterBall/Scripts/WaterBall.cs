@@ -9,8 +9,10 @@ public class WaterBall : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter(Collider other) {
-//		if (other.CompareTag("Enemy")) {
-//			Destroy(gameObject);
-//		}
+		if (other.CompareTag("Enemy"))
+		{
+			GameManager.Instance.EnemyHit();
+			Destroy(gameObject);
+		}
 	}
 }

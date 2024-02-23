@@ -27,7 +27,10 @@ public class TankFactory : MonoBehaviour
 		yield return new WaitForSeconds(spawnRate);
 		while(true)
 		{
-			Instantiate(spawnObject, GetRandomPosition(), spawnObject.transform.rotation);
+			if(GameManager.Instance.GameRunning)
+			{
+				Instantiate(spawnObject, GetRandomPosition(), spawnObject.transform.rotation);
+			}
 			yield return new WaitForSeconds(spawnRate);
 		}
 	}

@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54707910126541030}
   - component: {fileID: 82476879161157172}
   - component: {fileID: 114995005167296590}
+  - component: {fileID: 114650915149220048}
   m_Layer: 0
   m_Name: Paint Ball
   m_TagString: EnemyProjectile
@@ -181,6 +182,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114650915149220048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1973613083752186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b23f5dea6f0b4e7a868fc407333595d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTags:
+  - Building
+  - POI
 --- !u!114 &114995005167296590
 MonoBehaviour:
   m_ObjectHideFlags: 1

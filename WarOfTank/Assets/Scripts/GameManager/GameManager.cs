@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-	private bool gameStarted = false;
-	private bool gameRunning = false;
-	private int score = 0;
+	[SerializeField] private int tankDmgScore = 0;
+	[SerializeField] private int buildingDmgCost = 5;
+	[SerializeField] private int poiDmgCost = 25;
+	[SerializeField] private bool gameStarted = false;
+	[SerializeField] private bool gameRunning = false;
+	[SerializeField] private int score = 0;
+	
 	private static GameManager instance;
 
 	public bool GameStarted { get { return gameStarted; } }
@@ -36,12 +40,22 @@ public class GameManager : MonoBehaviour
 
 	public void EnemyHit()
 	{
-		score++;
+		score += tankDmgScore;
+	}
+
+	public void PoiHit()
+	{
+		SubtractFromScore(poiDmgCost);
 	}
 
 	public void BuildingHit()
 	{
-		score = Mathf.Max(0, score - 5);
+		SubtractFromScore(buildingDmgCost);
+	}
+
+	private void SubtractFromScore(int amount)
+	{
+		score = Mathf.Max(0, score - amount);
 	}
 
 	private void AnchorAdded(ARPlaneAnchor anchor)
@@ -51,7 +65,7 @@ public class GameManager : MonoBehaviour
 
 	}
 
-	private void AnchorRemoved(ARPlaneAnchor anchor) 
+	private void AnchorRemoved(ARPlaneAnchor anchor)
 	{
 		gameRunning = false;
 	}

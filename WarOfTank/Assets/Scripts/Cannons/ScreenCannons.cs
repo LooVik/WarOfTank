@@ -38,7 +38,7 @@ public class ScreenCannons : MonoBehaviour {
 	{
 		StartCoroutine(ReloadAmmo());
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
 	{
@@ -52,13 +52,20 @@ public class ScreenCannons : MonoBehaviour {
 	{
 		while (true)
 		{
-			curretnAmmo = Mathf.Min(curretnAmmo + 1, maxAmmo);
+			if(GameManager.Instance.GameRunning)
+			{
+				curretnAmmo = Mathf.Min(curretnAmmo + 1, maxAmmo);
+			}
 			yield return new WaitForSeconds(reloadTime);
 		}
 	}
 
 	private void ShotFire()
 	{
+		if(!GameManager.Instance.GameRunning)
+		{
+			return ;
+		}
 		if(curretnAmmo > 0 /*&& !EventSystem.current.IsPointerOverGameObject()*/)
 		{
 			GameObject newProjectile = Instantiate(projectile, transform.position, transform.rotation);
